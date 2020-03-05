@@ -7,20 +7,21 @@ using System.Windows;
 
 namespace Week_3_code_along
 {
-    class Dog
+    class Goose
     {
-        public string Breed;
-        public int Height;
         public string Name;
+        public string Age;
+        public string Atk;
 
-        public void Bark()
+        public void Honk() 
         {
-            MessageBox.Show("Bark");
+            MessageBox.Show("my name " + Name + "my age is" + Age);
         }
 
-        public void SayName()
+        public void Attack()
         {
-            MessageBox.Show("My name is " + Name);
+            MessageBox.Show("die nerd");
+            MessageBox.Show("you take " + Atk + "damage");
         }
     }
 }

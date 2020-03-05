@@ -13,27 +13,35 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Week_3_code_along
+namespace week_quatro
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+        private List<movie> Movies;
         public MainWindow()
         {
             InitializeComponent();
+            Movies = new List<movie>();
         }
 
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void addbut(object sender, RoutedEventArgs e)
         {
-            Goose goose = new Goose();
-            goose.Name = "gary";
-            goose.Age = "probabley like 2 or something";
-            goose.Atk = "9876543213456";
-            goose.Honk();
-            goose.Attack();
+            movie movie = new movie(Titleinput.Text, Convert.ToInt32(Ryearinput.Text));
+            Movies.Add(movie);
+            Titleinput.Clear();
+            Ryearinput.Clear();
+        }
+
+        private void showbut(object sender, RoutedEventArgs e)
+        {
+            foreach (movie movie in Movies)
+            {
+                movie.Showd();
+            }
         }
     }
 }
