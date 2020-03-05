@@ -35,7 +35,7 @@ namespace week_quatro
             Titleinput.Clear();
             Ryearinput.Clear();
         }
-
+        //commit test
         private void showbut(object sender, RoutedEventArgs e)
         {
             foreach (movie movie in Movies)
